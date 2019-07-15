@@ -1,0 +1,95 @@
+:root{
+  --background-Color: #bfbfbf;
+  --tooltip-Color: gray;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background-Color);
+}
+
+#container{
+  text-align: center;
+  margin: 15px;
+  shape-rendering: crispEdges;
+}
+
+#title{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#description{
+  padding: 10px;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+#tooltip {
+  padding: 8px;
+  background: var(--tooltip-Color);
+  border-radius: 2px;
+  color: white;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+/* Creates a small triangle extender for the tooltip */
+#tooltip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: var(--tooltip-Color);
+  position: absolute;
+  pointer-events: none;
+  content: "\25BC";
+  text-align: center;
+  margin: -3px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.legend{
+  font-size: 12px;
+}
+
+#footer{
+  margin: 15px;
+  font-weight: bold;
+  font-size: 0.80em;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  #title {
+    font-size: 2.5em;
+  }
+  #description {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #title {
+    font-size: 1.3em;
+  }
+  #description {
+    font-size: 0.7em;
+  }
+  #footer {
+    font-size: 0.6em;
+  }
+}
